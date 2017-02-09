@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/js/weekly.js" asp-append-version="true"></script>
+
+
+<br><br>
+<div ng-app="myapp" ng-controller="CalenderController">
+    <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+</div>
+
+<!-- Appointment Modal -->
+<div class="modal fade" id="apptModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Appointment</h4>
+        </div>
+        <div class="modal-body">
+            <p>Appointment time:</p>
+            <p id="time"></p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<button type="button" id="showModal" style="visibility:hidden" data-toggle="modal" data-target="#apptModal"></button>
