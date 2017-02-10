@@ -29,19 +29,21 @@ $http.get('/Home/GetEventsData', {
 
 $scope.uiConfig = {
     calendar: {
-        height: 545,
+        height: 507,
         editable: true,
         defaultView: 'agendaDay',
-        slotLabelFormat: ' ',
+        header: false,
         allDaySlot: false,
+        // axisFormat: 'h',
         minTime: '07:00:00',
         maxTime: '18:00:00',
         firstDay:1,
         header: {
             left: '',
-            center: 'title',
-            right: 'today prev,next'
+            center: '',
+            right: ''
         },
+        dayNames : ['', '', '', '', '', '', ''],
         dayClick : function (date, jsEvent, view) {
             var selectedTime = moment(date).format('YYYY-MM-DD HH:mm');
             document.getElementById('showModal').click();

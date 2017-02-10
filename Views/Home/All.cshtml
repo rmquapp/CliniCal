@@ -5,10 +5,23 @@
 <link rel="stylesheet" href="~/css/daily.css" />
 <script src="~/js/daily.js" asp-append-version="true"></script>
 
+<style type="text/css">
+/* Remove vertical axis on all but the first calendar */
+.hideXAxis .fc-axis
+{
+   display:none !important;
+}
+</style>
 
 <br><br>
 <div ng-app="myapp" ng-controller="CalenderController">
-    <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+    <!--<div id="calendarContainer" style="height:100%; width:100%; overflow: hidden;">-->
+        <div style="float:left;width:20%" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        <div class="hideXAxis" style="float:left;width:20%" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        <div class="hideXAxis" style="float:left;width:20%" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        <div class="hideXAxis" style="float:left;width:20%" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        <div class="hideXAxis" style="float:left;width:20%" ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+    <!--</div>
 </div>
 
 <!-- Appointment Modal -->

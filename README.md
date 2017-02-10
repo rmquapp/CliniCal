@@ -1,4 +1,4 @@
 # CliniCal
 
-An ASP.NET Core application for scheduling medical clinic appointments.
+An ASP.NET Core app for scheduling medical clinic appointments.
 
